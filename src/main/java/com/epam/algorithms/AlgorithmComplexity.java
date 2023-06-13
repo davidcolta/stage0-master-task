@@ -1,7 +1,7 @@
 package com.epam.algorithms;
 
 public class AlgorithmComplexity {
-    public static Complexity badLinearSearch(int n) {
+    public static Complexity badLinerSearch() {
         // Linear search complexity if the element is at the end of the array
         // Complexity: O(N)
         return Complexity.O_N;
@@ -13,13 +13,13 @@ public class AlgorithmComplexity {
         return Complexity.O_1;
     }
 
-    public static Complexity binarySorting(int n) {
+    public static Complexity binarySorting() {
         // Complexity of binary search
         // Complexity: O(log N)
         return Complexity.O_LOG_N;
     }
 
-    public static Complexity twoCycleSorting(int n) {
+    public static Complexity twoCycleSorting() {
         // Complexity of the Two Cycle Sorting algorithm
         // Complexity: O(N^2)
         return Complexity.O_N_2;

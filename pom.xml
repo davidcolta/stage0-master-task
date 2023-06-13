@@ -34,6 +34,11 @@
             <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.github.vinccool96.algorithms</groupId>
+            <artifactId>algorithms</artifactId>
+            <version>1.2</version>
+        </dependency>
     </dependencies>
 
     <properties>

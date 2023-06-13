@@ -4,10 +4,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.epam.algorithms.utils.AlgorithmComplexity.Complexity;
+import com.epam.algorithms.utils.Complexity;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.junit.jupiter.api.Test;
-
 
 class AlgorithmComplexityTest {
 

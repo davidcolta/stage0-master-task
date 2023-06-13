@@ -5,18 +5,35 @@ import java.time.YearMonth;
 public class DaysInMonth {
 
     public void printDays(int year, int month) {
-        if (year < 0) {
-            System.out.println("Invalid date: Negative year");
+        if (year < 0 || month < 1 || month > 12) {
+            System.out.println("invalid date");
             return;
         }
 
-        if (month < 1 || month > 12) {
-            System.out.println("Invalid date: Month should be between 1 and 12");
-            return;
+        int daysInMonth;
+
+        switch (month) {
+            case 2 -> { // February
+                if (isLeapYear(year))
+                    daysInMonth = 29;
+                else
+                    daysInMonth = 28;
+            } // April
+            // June
+            // September
+            case 4, 6, 9, 11 -> // November
+                    daysInMonth = 30;
+            default -> daysInMonth = 31;
         }
 
-        YearMonth yearMonth = YearMonth.of(year, month);
-        int daysInMonth = yearMonth.lengthOfMonth();
-        System.out.println("Number of days in the month: " + daysInMonth);
+        System.out.println(daysInMonth);
+    }
+
+    private boolean isLeapYear(int year) {
+        if (year % 4 != 0)
+            return false;
+        else if (year % 100 != 0)
+            return true;
+        else return year % 400 == 0;
     }
 }

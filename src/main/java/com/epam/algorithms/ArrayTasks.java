@@ -67,6 +67,7 @@ public class ArrayTasks {
         for (int[] subArray : arr) {
             Arrays.sort(subArray);
         }
+
         return arr;
     }
 }

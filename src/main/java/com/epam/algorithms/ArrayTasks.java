@@ -1,8 +1,5 @@
 package com.epam.algorithms;
 
-import java.util.Arrays;
-import java.util.Comparator;
-
 public class ArrayTasks {
     public String[] seasonsArray() {
         return new String[]{"winter", "spring", "summer", "autumn"};
@@ -63,9 +60,26 @@ public class ArrayTasks {
     }
 
     public int[][] sortRaggedArray(int[][] arr) {
-        Arrays.sort(arr, Comparator.comparingInt(a -> a.length));
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j].length > arr[j + 1].length) {
+                    int[] temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+
         for (int[] subArray : arr) {
-            Arrays.sort(subArray);
+            for (int i = 0; i < subArray.length - 1; i++) {
+                for (int j = 0; j < subArray.length - i - 1; j++) {
+                    if (subArray[j] > subArray[j + 1]) {
+                        int temp = subArray[j];
+                        subArray[j] = subArray[j + 1];
+                        subArray[j + 1] = temp;
+                    }
+                }
+            }
         }
 
         return arr;
